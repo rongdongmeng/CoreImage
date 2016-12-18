@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="testCoreImage" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rmA-YU-r9L">
+                                <rect key="frame" x="107" y="254" width="160" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="POb-ho-NXe"/>
+                                    <constraint firstAttribute="height" constant="160" id="Whw-CU-HGt"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oCq-XI-bax">
+                                <rect key="frame" x="46" y="603" width="111" height="34"/>
+                                <color key="backgroundColor" red="0.73333333329999995" green="0.73333333329999995" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="改善图像质量">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="autoAjustmentImage" destination="BYZ-38-t0r" eventType="touchUpInside" id="h3F-zY-Agn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hg4-kN-JZD">
+                                <rect key="frame" x="46" y="549" width="111" height="34"/>
+                                <color key="backgroundColor" red="0.73333333329999995" green="0.73333333329999995" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="原图">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="autoAjustmentImage" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ohp-jA-iao"/>
+                                    <action selector="showOriginalImage" destination="BYZ-38-t0r" eventType="touchUpInside" id="fzv-Ey-QYT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="oCq-XI-bax" firstAttribute="top" secondItem="hg4-kN-JZD" secondAttribute="bottom" constant="20" id="EIq-VQ-nas"/>
+                            <constraint firstItem="oCq-XI-bax" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="GOL-B6-CLO"/>
+                            <constraint firstItem="oCq-XI-bax" firstAttribute="leading" secondItem="hg4-kN-JZD" secondAttribute="leading" id="U2X-qR-9TA"/>
+                            <constraint firstItem="rmA-YU-r9L" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xvz-Jt-mbM"/>
+                            <constraint firstItem="rmA-YU-r9L" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="alw-YE-5ML"/>
+                            <constraint firstItem="oCq-XI-bax" firstAttribute="width" secondItem="hg4-kN-JZD" secondAttribute="width" id="dPd-Tc-joj"/>
+                            <constraint firstItem="oCq-XI-bax" firstAttribute="height" secondItem="hg4-kN-JZD" secondAttribute="height" id="toM-id-OHe"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="oCq-XI-bax" secondAttribute="bottom" constant="30" id="uVj-W4-BcM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="rmA-YU-r9L" id="6Gq-Q5-qUI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
